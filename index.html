@@ -547,6 +547,18 @@
 
 <body class="bg-bgMain text-textDark pattern-bg">
 
+
+    <!-- HEADER -->
+    <header
+        class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-border/50 transition-transform duration-300">
+        <div class="max-w-md mx-auto px-4 py-4 flex flex-col items-center justify-center">
+            <span class="font-display font-bold text-lg text-textDark flex items-center gap-2">
+
+                Excellearn <span class="text-primary">Wealth Tracker</span>
+            </span>
+        </div>
+    </header>
+
     <!-- HERO SECTION -->
     <section class="hero-gradient pt-6 pb-10 px-4">
         <div class="max-w-md mx-auto">
@@ -1799,6 +1811,18 @@
             } else {
                 if (stickyCta) {
                     stickyCta.classList.add('translate-y-full');
+                }
+            }
+
+            // Header hide on scroll down
+            const mainHeader = document.querySelector('header');
+            if (mainHeader) {
+                if (scrollY > 50 && scrollY > lastScrollY) {
+                    // Scrolling down
+                    mainHeader.classList.add('-translate-y-full');
+                } else {
+                    // Scrolling up
+                    mainHeader.classList.remove('-translate-y-full');
                 }
             }
 

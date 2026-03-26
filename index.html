@@ -8,9 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -48,13 +46,7 @@
             font-family: 'Inter', sans-serif;
         }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        .font-display {
+        h1, h2, h3, h4, h5, h6, .font-display {
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
@@ -63,27 +55,13 @@
         }
 
         @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
         }
 
         @keyframes pulse-soft {
-
-            0%,
-            100% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0.7;
-            }
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
         }
 
         .animate-float {
@@ -199,10 +177,6 @@
 
         .faq-trigger:focus {
             outline: none;
-        }
-
-        .faq-trigger:focus-visible {
-            box-shadow: inset 0 0 0 2px #FF8C42;
         }
 
         .faq-question {
@@ -367,158 +341,6 @@
             z-index: 10;
         }
 
-        .slide-content {
-            padding: 24px;
-            min-height: 320px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .slide-header {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 16px;
-        }
-
-        .slide-badge {
-            background: rgba(255, 140, 66, 0.2);
-            color: #FF8C42;
-            font-size: 11px;
-            font-weight: 600;
-            padding: 4px 10px;
-            border-radius: 20px;
-        }
-
-        .slide-title {
-            color: #FFFFFF;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 700;
-            font-size: 16px;
-            margin: 0;
-        }
-
-        .slide-image {
-            flex: 1;
-            border-radius: 12px;
-            overflow: hidden;
-            background: rgba(255, 255, 255, 0.05);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .slide-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Chat UI Preview */
-        .chat-preview {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            padding: 8px 0;
-        }
-
-        .chat-bubble {
-            max-width: 85%;
-            padding: 12px 14px;
-            border-radius: 16px;
-            font-size: 13px;
-            line-height: 1.5;
-            animation: chatIn 0.4s ease-out;
-        }
-
-        @keyframes chatIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .chat-bubble.user {
-            align-self: flex-end;
-            background: #FF8C42;
-            color: #FFFFFF;
-            border-bottom-right-radius: 4px;
-        }
-
-        .chat-bubble.ai {
-            align-self: flex-start;
-            background: rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.9);
-            border-bottom-left-radius: 4px;
-        }
-
-        .chat-bubble .label {
-            font-size: 10px;
-            opacity: 0.7;
-            margin-bottom: 4px;
-            display: block;
-        }
-
-        .chat-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 6px 0;
-        }
-
-        .chat-item-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: #22C55E;
-            flex-shrink: 0;
-        }
-
-        /* Stats Preview */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            flex: 1;
-        }
-
-        .stat-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 16px;
-            text-align: center;
-        }
-
-        .stat-value {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 24px;
-            font-weight: 700;
-            color: #FF8C42;
-        }
-
-        .stat-label {
-            font-size: 11px;
-            color: rgba(255, 255, 255, 0.5);
-            margin-top: 4px;
-        }
-
-        .stat-change {
-            font-size: 11px;
-            color: #22C55E;
-            margin-top: 4px;
-        }
-
-        .stat-change.down {
-            color: #EF4444;
-        }
-
         .comparison-table {
             border-collapse: separate;
             border-spacing: 0;
@@ -529,11 +351,17 @@
             border-bottom: 1px solid #E7E5E4;
         }
 
-        @media (prefers-reduced-motion: reduce) {
+        /* Hide scrollbar for testimonial slider */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
 
-            *,
-            *::before,
-            *::after {
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
                 animation-duration: 0.01ms !important;
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
@@ -548,13 +376,10 @@
 
 <body class="bg-bgMain text-textDark pattern-bg">
 
-
     <!-- HEADER -->
-    <header
-        class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-border/50 transition-transform duration-300">
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-border/50 transition-transform duration-300">
         <div class="max-w-md mx-auto px-4 py-4 flex flex-col items-center justify-center">
             <span class="font-display font-bold text-lg text-textDark flex items-center gap-2">
-
                 Excellearn <span class="text-primary">Wealth Tracker</span>
             </span>
         </div>
@@ -567,30 +392,22 @@
             <div class="flex justify-center mb-6 reveal">
                 <div class="inline-flex items-center gap-2 bg-white/90 px-4 py-2 rounded-full card-shadow">
                     <span class="w-2 h-2 bg-success rounded-full animate-pulse-soft"></span>
-                    <span class="text-sm font-medium text-textDark">Sisa Slot: <span id="slot-count"
-                            class="text-primary font-bold">37</span></span>
+                    <span class="text-sm font-medium text-textDark">Sisa Slot: <span id="slot-count" class="text-primary font-bold">37</span></span>
                 </div>
             </div>
 
             <!-- Hero Image -->
             <div class="relative mb-6 reveal" style="animation-delay: 0.1s;">
                 <div class="absolute -inset-4 bg-primary/10 rounded-3xl blur-2xl"></div>
-                <!-- BACKUP GAMBAR LAMA
-                <img src="https://placehold.co/600x400/FFF7ED/FF8C42?text=Chat+Your+Expenses"
-                    alt="Excellearn Wealth Tracker Interface"
-                    class="relative rounded-2xl card-shadow w-full animate-float">
-                -->
                 <img src="hero-image.png"
                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFF7ED/FF8C42?text=Chat+Your+Expenses';"
                     alt="Excellearn Wealth Tracker Interface"
                     class="relative rounded-2xl card-shadow w-full animate-float">
                 <!-- Floating Elements -->
-                <div
-                    class="absolute -right-2 top-4 bg-white px-3 py-2 rounded-lg card-shadow text-sm font-medium animate-pulse-soft">
+                <div class="absolute -right-2 top-4 bg-white px-3 py-2 rounded-lg card-shadow text-sm font-medium animate-pulse-soft">
                     <span class="text-success">+</span> Rp 150.000
                 </div>
-                <div class="absolute -left-2 bottom-8 bg-white px-3 py-2 rounded-lg card-shadow text-sm font-medium animate-pulse-soft"
-                    style="animation-delay: 0.5s;">
+                <div class="absolute -left-2 bottom-8 bg-white px-3 py-2 rounded-lg card-shadow text-sm font-medium animate-pulse-soft" style="animation-delay: 0.5s;">
                     <span class="text-red-500">-</span> Rp 45.000
                 </div>
             </div>
@@ -602,16 +419,13 @@
                     <span class="gradient-text">Datanya Aman di Google Sheets Kamu Sendiri.</span>
                 </h1>
                 <p class="text-textMuted text-base mb-6 leading-relaxed">
-                    Lagi bingung ngatur keuangan? Bingung duit kemana aja? Tenang, sekarang catat pengeluaran semudah
-                    chat temen. Bisa voice input lagi!
+                    Lagi bingung ngatur keuangan? Bingung duit kemana aja? Tenang, sekarang catat pengeluaran semudah chat temen. Bisa voice input lagi!
                 </p>
 
                 <!-- CTA Button -->
-                <a href="#conversion" data-action="cta-click"
-                    class="btn-primary no-underline inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-white text-lg">
+                <a href="#conversion" data-action="cta-click" class="btn-primary no-underline inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-white text-lg">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                     Mulai Catat dengan AI
                 </a>
@@ -625,12 +439,8 @@
         <div class="max-w-md mx-auto">
             <div class="reveal">
                 <div class="text-center mb-8">
-                    <span
-                        class="inline-block bg-red-50 text-red-600 text-xs font-semibold px-3 py-1 rounded-full mb-3">MASALAH
-                        YANG SERING TERJADI</span>
-                    <h2 class="font-display text-xl font-bold text-textDark">
-                        Pernah Gini Gak?
-                    </h2>
+                    <span class="inline-block bg-red-50 text-red-600 text-xs font-semibold px-3 py-1 rounded-full mb-3">MASALAH YANG SERING TERJADI</span>
+                    <h2 class="font-display text-xl font-bold text-textDark">Pernah Gini Gak?</h2>
                 </div>
 
                 <div class="space-y-4">
@@ -638,14 +448,12 @@
                     <div class="flex items-start gap-4 p-4 bg-bgMain rounded-xl card-hover cursor-default">
                         <div class="flex-shrink-0 w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
                             <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                         </div>
                         <div>
                             <h3 class="font-semibold text-textDark mb-1">Aplikasi catat keuangan ribet</h3>
-                            <p class="text-textMuted text-sm">Harus input manual, pilih kategori, kadang malas buka
-                                aplikasinya</p>
+                            <p class="text-textMuted text-sm">Harus input manual, pilih kategori, kadang malas buka aplikasinya</p>
                         </div>
                     </div>
 
@@ -653,14 +461,12 @@
                     <div class="flex items-start gap-4 p-4 bg-bgMain rounded-xl card-hover cursor-default">
                         <div class="flex-shrink-0 w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
                             <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                         </div>
                         <div>
                             <h3 class="font-semibold text-textDark mb-1">Gajih udah abis, gatahu kemana</h3>
-                            <p class="text-textMuted text-sm">Akhir bulan bingung, duit udah habis tapi gak ada catatan
-                                jelas</p>
+                            <p class="text-textMuted text-sm">Akhir bulan bingung, duit udah habis tapi gak ada catatan jelas</p>
                         </div>
                     </div>
 
@@ -668,14 +474,12 @@
                     <div class="flex items-start gap-4 p-4 bg-bgMain rounded-xl card-hover cursor-default">
                         <div class="flex-shrink-0 w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
                             <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
                             </svg>
                         </div>
                         <div>
                             <h3 class="font-semibold text-textDark mb-1">Sering lupa catat transaksi</h3>
-                            <p class="text-textMuted text-sm">Lagi sibuk, malas buka HP, akhirnya transaksi hilang tidak
-                                tercatat</p>
+                            <p class="text-textMuted text-sm">Lagi sibuk, malas buka HP, akhirnya transaksi hilang tidak tercatat</p>
                         </div>
                     </div>
 
@@ -683,14 +487,12 @@
                     <div class="flex items-start gap-4 p-4 bg-bgMain rounded-xl card-hover cursor-default">
                         <div class="flex-shrink-0 w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
                             <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                             </svg>
                         </div>
                         <div>
                             <h3 class="font-semibold text-textDark mb-1">Khawatir data kebocor</h3>
-                            <p class="text-textMuted text-sm">Takut data keuangan pribadi diambil pihak lain atau dijual
-                            </p>
+                            <p class="text-textMuted text-sm">Takut data keuangan pribadi diambil pihak lain atau dijual</p>
                         </div>
                     </div>
                 </div>
@@ -702,51 +504,32 @@
     <section class="py-12 px-4 bg-gradient-to-b from-bgMain to-orange-50">
         <div class="max-w-md mx-auto reveal">
             <div class="text-center mb-6">
-                <h2 class="font-display text-xl font-bold text-textDark mb-4">
-                    Bayangin Kalo Gak Segera Diatur...
-                </h2>
+                <h2 class="font-display text-xl font-bold text-textDark mb-4">Bayangin Kalo Gak Segera Diatur...</h2>
             </div>
 
             <div class="bg-white p-6 rounded-2xl card-shadow border-l-4 border-primary">
                 <ul class="space-y-3 text-textMuted">
                     <li class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd" />
-                        </svg>
+                        <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
                         <span>Sleep makin sulit karena kepala pusing mikirin duit</span>
                     </li>
                     <li class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd" />
-                        </svg>
+                        <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
                         <span>Target tabungan gak pernah kecapaian</span>
                     </li>
                     <li class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd" />
-                        </svg>
+                        <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
                         <span>Waktu terbuang bikin laporan keuangan manual</span>
                     </li>
                     <li class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd" />
-                        </svg>
+                        <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
                         <span>Stres tiap akhir bulan cek saldo</span>
                     </li>
                 </ul>
             </div>
 
             <p class="text-center text-textMuted mt-6 text-sm">
-                Padahal solusinya simpel banget... <span class="text-primary font-semibold">Catat dengan cara yang kamu
-                    suka.</span>
+                Padahal solusinya simpel banget... <span class="text-primary font-semibold">Catat dengan cara yang kamu suka.</span>
             </p>
         </div>
     </section>
@@ -755,84 +538,61 @@
     <section class="py-12 px-4 bg-white">
         <div class="max-w-md mx-auto">
             <div class="text-center mb-8 reveal">
-                <span
-                    class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-3">SOLUSI
-                    UNTUK KAMU</span>
+                <span class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-3">SOLUSI UNTUK KAMU</span>
                 <h2 class="font-display text-2xl font-bold text-textDark mb-4">
                     Kenalan sama <span class="gradient-text">Excellearn Wealth Tracker</span>
                 </h2>
                 <p class="text-textMuted">
-                    Catat keuangan pakai bahasa sehari-hari via chat AI. Bisa voice input, bisa banyak transaksi sekali
-                    chat, dan data aman di Google Sheets kamu sendiri.
+                    Catat keuangan pakai bahasa sehari-hari via chat AI. Bisa voice input, bisa banyak transaksi sekali chat, dan data aman di Google Sheets kamu sendiri.
                 </p>
             </div>
 
             <!-- Feature Cards -->
             <div class="space-y-4">
-                <div class="bg-gradient-to-r from-orange-50 to-white p-5 rounded-xl card-shadow reveal"
-                    style="animation-delay: 0.1s;">
+                <div class="bg-gradient-to-r from-orange-50 to-white p-5 rounded-xl card-shadow reveal" style="animation-delay: 0.1s;">
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                            </svg>
+                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                         </div>
                         <div>
                             <h3 class="font-semibold text-textDark">Chat Seperti Temen</h3>
-                            <p class="text-textMuted text-sm">Tinggal ketik atau voice, AI langsung catat. Misal: "Tadi
-                                beli kopi 25rb, makan siang 35rb"</p>
+                            <p class="text-textMuted text-sm">Tinggal ketik atau voice, AI langsung catat. Misal: "Tadi beli kopi 25rb, makan siang 35rb"</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-gradient-to-r from-orange-50 to-white p-5 rounded-xl card-shadow reveal"
-                    style="animation-delay: 0.2s;">
+                <div class="bg-gradient-to-r from-orange-50 to-white p-5 rounded-xl card-shadow reveal" style="animation-delay: 0.2s;">
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-                            </svg>
+                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /></svg>
                         </div>
                         <div>
                             <h3 class="font-semibold text-textDark">Voice Input Support</h3>
-                            <p class="text-textMuted text-sm">Lagi di jalan? Tinggal bicara, transaksi langsung tercatat
-                                otomatis</p>
+                            <p class="text-textMuted text-sm">Lagi di jalan? Tinggal bicara, transaksi langsung tercatat otomatis</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-gradient-to-r from-orange-50 to-white p-5 rounded-xl card-shadow reveal"
-                    style="animation-delay: 0.3s;">
+                <div class="bg-gradient-to-r from-orange-50 to-white p-5 rounded-xl card-shadow reveal" style="animation-delay: 0.3s;">
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-                            </svg>
+                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>
                         </div>
                         <div>
                             <h3 class="font-semibold text-textDark">Multi-Transaction</h3>
-                            <p class="text-textMuted text-sm">Satu chat, banyak transaksi langsung kecatat semua. Hemat
-                                waktu!</p>
+                            <p class="text-textMuted text-sm">Satu chat, banyak transaksi langsung kecatat semua. Hemat waktu!</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-gradient-to-r from-orange-50 to-white p-5 rounded-xl card-shadow reveal"
-                    style="animation-delay: 0.4s;">
+                <div class="bg-gradient-to-r from-orange-50 to-white p-5 rounded-xl card-shadow reveal" style="animation-delay: 0.4s;">
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                            </svg>
+                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                         </div>
                         <div>
                             <h3 class="font-semibold text-textDark">Data Aman di Google Sheets</h3>
-                            <p class="text-textMuted text-sm">Data kamu disimpan di Google Sheets pribadi. Bukan di
-                                server orang lain!</p>
+                            <p class="text-textMuted text-sm">Data kamu disimpan di Google Sheets pribadi. Bukan di server orang lain!</p>
                         </div>
                     </div>
                 </div>
@@ -858,175 +618,38 @@
                     <div class="carousel-track" id="carousel-track">
                         <!-- Slide 1: Chat Interface -->
                         <div class="carousel-slide">
-                            <!-- BACKUP KODE LAMA SLIDE 1
-                            <div class="slide-content">
-                                <div class="slide-header">
-                                    <span class="slide-badge">Chat AI</span>
-                                    <h3 class="slide-title">Catat dengan Bahasa Sehari-hari</h3>
+                            <!-- PERBAIKAN: Menggunakan aspect-square dan object-cover untuk memaksa rasio 1:1 -->
+                            <div class="slide-content p-0">
+                                <div class="w-full aspect-square bg-[#1C1917] flex items-center justify-center overflow-hidden">
+                                    <img src="slide1.png" alt="Slide 1" class="w-full h-full object-cover">
                                 </div>
-                                <div class="chat-preview">
-                                    <div class="chat-bubble user">
-                                        <span class="label">Kamu</span>
-                                        Tadi beli groceries 250rb, isi bensin 100rb, bayar listrik 180rb
-                                    </div>
-                                    <div class="chat-bubble ai">
-                                        <span class="label">AI Assistant</span>
-                                        Siap! Sudah saya catat:
-                                        <div class="chat-item">
-                                            <span class="chat-item-dot"></span>
-                                            Groceries: Rp 250.000
-                                        </div>
-                                        <div class="chat-item">
-                                            <span class="chat-item-dot"></span>
-                                            Bensin: Rp 100.000
-                                        </div>
-                                        <div class="chat-item">
-                                            <span class="chat-item-dot"></span>
-                                            Listrik: Rp 180.000
-                                        </div>
-                                        <strong style="color: #FF8C42;">Total: Rp 530.000</strong>
-                                    </div>
-                                </div>
-                            </div>
-                            -->
-                            <div class="slide-content" style="padding: 0;">
-                                <img src="slide1.png" alt="Slide 1"
-                                    style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 12px;">
                             </div>
                         </div>
 
                         <!-- Slide 2: Dashboard -->
                         <div class="carousel-slide">
-                            <!-- BACKUP KODE LAMA SLIDE 2
-                            <div class="slide-content">
-                                <div class="slide-header">
-                                    <span class="slide-badge">Dashboard</span>
-                                    <h3 class="slide-title">Ringkasan Keuangan Bulan Ini</h3>
+                            <div class="slide-content p-0">
+                                <div class="w-full aspect-square bg-[#1C1917] flex items-center justify-center overflow-hidden">
+                                    <img src="slide2.png" alt="Slide 2" class="w-full h-full object-cover">
                                 </div>
-                                <div class="stats-grid">
-                                    <div class="stat-card">
-                                        <div class="stat-value">Rp 8,5 Jt</div>
-                                        <div class="stat-label">Pemasukan</div>
-                                        <div class="stat-change">+12% dari bulan lalu</div>
-                                    </div>
-                                    <div class="stat-card">
-                                        <div class="stat-value">Rp 5,2 Jt</div>
-                                        <div class="stat-label">Pengeluaran</div>
-                                        <div class="stat-change down">+8% dari bulan lalu</div>
-                                    </div>
-                                    <div class="stat-card">
-                                        <div class="stat-value">Rp 3,3 Jt</div>
-                                        <div class="stat-label">Sisa Budget</div>
-                                        <div class="stat-change">65% target tercapai</div>
-                                    </div>
-                                    <div class="stat-card">
-                                        <div class="stat-value">147</div>
-                                        <div class="stat-label">Transaksi Dicatat</div>
-                                        <div class="stat-change">Rata-rata 5/hari</div>
-                                    </div>
-                                </div>
-                            </div>
-                            -->
-                            <div class="slide-content" style="padding: 0;">
-                                <img src="slide2.png" alt="Slide 2"
-                                    style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 12px;">
                             </div>
                         </div>
 
                         <!-- Slide 3: Categories -->
                         <div class="carousel-slide">
-                            <!-- BACKUP KODE LAMA SLIDE 3
-                            <div class="slide-content">
-                                <div class="slide-header">
-                                    <span class="slide-badge">Kategori</span>
-                                    <h3 class="slide-title">Pengeluaran per Kategori</h3>
+                            <div class="slide-content p-0">
+                                <div class="w-full aspect-square bg-[#1C1917] flex items-center justify-center overflow-hidden">
+                                    <img src="slide3.png" alt="Slide 3" class="w-full h-full object-cover">
                                 </div>
-                                <div class="chat-preview">
-                                    <div class="chat-bubble ai" style="max-width: 100%;">
-                                        <div style="margin-bottom: 12px;">
-                                            <div
-                                                style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                                                <span>Makanan & Minuman</span>
-                                                <span style="color: #FF8C42;">Rp 1.850.000</span>
-                                            </div>
-                                            <div
-                                                style="background: rgba(255,255,255,0.1); height: 6px; border-radius: 3px; overflow: hidden;">
-                                                <div
-                                                    style="background: #FF8C42; width: 35%; height: 100%; border-radius: 3px;">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div style="margin-bottom: 12px;">
-                                            <div
-                                                style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                                                <span>Transportasi</span>
-                                                <span style="color: #FF8C42;">Rp 950.000</span>
-                                            </div>
-                                            <div
-                                                style="background: rgba(255,255,255,0.1); height: 6px; border-radius: 3px; overflow: hidden;">
-                                                <div
-                                                    style="background: #FF8C42; width: 18%; height: 100%; border-radius: 3px;">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div style="margin-bottom: 12px;">
-                                            <div
-                                                style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                                                <span>Belanja</span>
-                                                <span style="color: #FF8C42;">Rp 1.200.000</span>
-                                            </div>
-                                            <div
-                                                style="background: rgba(255,255,255,0.1); height: 6px; border-radius: 3px; overflow: hidden;">
-                                                <div
-                                                    style="background: #FF8C42; width: 23%; height: 100%; border-radius: 3px;">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div
-                                                style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                                                <span>Tagihan & Utilitas</span>
-                                                <span style="color: #FF8C42;">Rp 800.000</span>
-                                            </div>
-                                            <div
-                                                style="background: rgba(255,255,255,0.1); height: 6px; border-radius: 3px; overflow: hidden;">
-                                                <div
-                                                    style="background: #FF8C42; width: 15%; height: 100%; border-radius: 3px;">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            -->
-                            <div class="slide-content" style="padding: 0;">
-                                <img src="slide3.png" alt="Slide 3"
-                                    style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 12px;">
                             </div>
                         </div>
 
                         <!-- Slide 4: Google Sheets Integration -->
                         <div class="carousel-slide">
-                            <!-- BACKUP KODE LAMA SLIDE 4
-                            <div class="slide-content">
-                                <div class="slide-header">
-                                    <span class="slide-badge">Google Sheets</span>
-                                    <h3 class="slide-title">Data Lengkap di Spreadsheet</h3>
+                            <div class="slide-content p-0">
+                                <div class="w-full aspect-square bg-[#1C1917] flex items-center justify-center overflow-hidden">
+                                    <img src="slide4.png" alt="Slide 4" class="w-full h-full object-cover">
                                 </div>
-                                <div class="slide-image"
-                                    style="background: #FFFFFF; border-radius: 12px; overflow: hidden;">
-                                    <img src="https://placehold.co/400x200/FFFFFF/333333?text=Google+Sheets+Preview"
-                                        alt="Google Sheets Integration" style="object-fit: contain; padding: 16px;">
-                                </div>
-                                <p
-                                    style="color: rgba(255,255,255,0.6); font-size: 12px; text-align: center; margin-top: 12px;">
-                                    Data tersimpan di Google Sheets milik kamu sendiri
-                                </p>
-                            </div>
-                            -->
-                            <div class="slide-content" style="padding: 0;">
-                                <img src="slide4.png" alt="Slide 4"
-                                    style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 12px;">
                             </div>
                         </div>
                     </div>
@@ -1047,11 +670,8 @@
     <section class="py-12 px-4 bg-bgMain">
         <div class="max-w-md mx-auto">
             <div class="text-center mb-8 reveal">
-                <span
-                    class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-3">PERBANDINGAN</span>
-                <h2 class="font-display text-xl font-bold text-textDark">
-                    Cara Lama vs Excellearn
-                </h2>
+                <span class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-3">PERBANDINGAN</span>
+                <h2 class="font-display text-xl font-bold text-textDark">Cara Lama vs Excellearn</h2>
             </div>
 
             <div class="bg-white rounded-2xl card-shadow overflow-hidden reveal">
@@ -1067,85 +687,65 @@
                         <tr>
                             <td class="p-4 text-textMuted">Input Data</td>
                             <td class="p-4 text-center">
-                                <svg class="w-5 h-5 mx-auto text-red-400" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M6 18L18 6M6 6l12 12" />
+                                <svg class="w-5 h-5 mx-auto text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                                 </svg>
                             </td>
                             <td class="p-4 text-center">
-                                <svg class="w-5 h-5 mx-auto text-success" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7" />
+                                <svg class="w-5 h-5 mx-auto text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
                             </td>
                         </tr>
                         <tr class="bg-bgMain/50">
                             <td class="p-4 text-textMuted">Voice Input</td>
                             <td class="p-4 text-center">
-                                <svg class="w-5 h-5 mx-auto text-red-400" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M6 18L18 6M6 6l12 12" />
+                                <svg class="w-5 h-5 mx-auto text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                                 </svg>
                             </td>
                             <td class="p-4 text-center">
-                                <svg class="w-5 h-5 mx-auto text-success" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7" />
+                                <svg class="w-5 h-5 mx-auto text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
                             </td>
                         </tr>
                         <tr>
                             <td class="p-4 text-textMuted">Multi-Transaksi</td>
                             <td class="p-4 text-center">
-                                <svg class="w-5 h-5 mx-auto text-red-400" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M6 18L18 6M6 6l12 12" />
+                                <svg class="w-5 h-5 mx-auto text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                                 </svg>
                             </td>
                             <td class="p-4 text-center">
-                                <svg class="w-5 h-5 mx-auto text-success" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7" />
+                                <svg class="w-5 h-5 mx-auto text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
                             </td>
                         </tr>
                         <tr class="bg-bgMain/50">
-                            <td class="p-4 text-textMuted">Data di Google Sheets Sendiri</td>
+                            <td class="p-4 text-textMuted">Data di G-Sheets Sendiri</td>
                             <td class="p-4 text-center">
-                                <svg class="w-5 h-5 mx-auto text-red-400" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M6 18L18 6M6 6l12 12" />
+                                <svg class="w-5 h-5 mx-auto text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                                 </svg>
                             </td>
                             <td class="p-4 text-center">
-                                <svg class="w-5 h-5 mx-auto text-success" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7" />
+                                <svg class="w-5 h-5 mx-auto text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
                             </td>
                         </tr>
                         <tr>
                             <td class="p-4 text-textMuted">Perlu Install App</td>
                             <td class="p-4 text-center">
-                                <svg class="w-5 h-5 mx-auto text-red-400" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7" />
+                                <svg class="w-5 h-5 mx-auto text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                 </svg>
                             </td>
                             <td class="p-4 text-center">
-                                <svg class="w-5 h-5 mx-auto text-success" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M6 18L18 6M6 6l12 12" />
+                                <svg class="w-5 h-5 mx-auto text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                                 </svg>
                             </td>
                         </tr>
@@ -1155,140 +755,98 @@
         </div>
     </section>
 
-    <!-- TESTIMONIAL SECTION -->
-    <section class="py-12 px-4 bg-white">
+    <!-- TESTIMONIAL SECTION (UPDATED TO HORIZONTAL SLIDER) -->
+    <section class="py-12 px-4 bg-white overflow-hidden">
         <div class="max-w-md mx-auto">
             <div class="text-center mb-8 reveal">
-                <span
-                    class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-3">TESTIMONI</span>
+                <span class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-3">TESTIMONI</span>
                 <h2 class="font-display text-xl font-bold text-textDark">
                     Kata Mereka yang Udah Pake
                 </h2>
             </div>
 
-            <div class="space-y-4">
-                <!-- Testimonial 1 -->
-                <div class="bg-white rounded-xl p-5 border border-borderLight card-hover reveal"
-                    style="animation-delay: 0.1s;">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div
-                            class="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-primaryLight flex items-center justify-center text-white font-semibold text-sm">
-                            RA
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-textDark text-sm">Rina A.</h4>
-                            <p class="text-xs text-textMuted">Marketing Staff, Jakarta</p>
+            <!-- Testimonial Horizontal Scroll Track -->
+            <div class="reveal">
+                <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 hide-scrollbar w-full" id="testi-track" style="scroll-behavior: smooth;">
+                    
+                    <!-- Testi 1 -->
+                    <div class="snap-center shrink-0 w-[85%]">
+                        <div class="bg-white rounded-[20px] p-6 border border-borderLight card-shadow h-full flex flex-col">
+                            <!-- Stars -->
+                            <div class="flex gap-1 mb-4 text-[#FBBF24]">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            </div>
+                            <p class="text-textMuted italic mb-6 leading-relaxed flex-grow">"Dulu selalu gagal konsisten catat keuangan. Pakai ini jadi gampang banget, tinggal chat pas lagi nunggu MRT. <strong class="text-textDark font-semibold">Sebulan udah kelihatan pola pengeluaran saya.</strong>"</p>
+                            <div class="flex items-center gap-3 mt-auto">
+                                <div class="w-12 h-12 rounded-full bg-[#FCE7F3] text-[#DB2777] flex items-center justify-center font-bold text-lg shrink-0">
+                                    RA
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-textDark text-sm">Rina A.</h4>
+                                    <p class="text-xs text-textLight">Marketing Staff, Jakarta</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <p class="text-sm text-textMuted leading-relaxed">
-                        "Dulu selalu gagal konsisten catat keuangan. Pakai ini jadi gampang banget, tinggal chat pas
-                        lagi nunggu MRT. <strong class="text-textDark">Sebulan udah kelihatan pola pengeluaran
-                            saya.</strong>"
-                    </p>
-                    <div class="flex gap-1 mt-3">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#FF8C42" stroke="none">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                        </svg>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#FF8C42" stroke="none">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                        </svg>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#FF8C42" stroke="none">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                        </svg>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#FF8C42" stroke="none">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                        </svg>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#FF8C42" stroke="none">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                        </svg>
+
+                    <!-- Testi 2 -->
+                    <div class="snap-center shrink-0 w-[85%]">
+                        <div class="bg-white rounded-[20px] p-6 border border-borderLight card-shadow h-full flex flex-col">
+                            <!-- Stars -->
+                            <div class="flex gap-1 mb-4 text-[#FBBF24]">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            </div>
+                            <p class="text-textMuted italic mb-6 leading-relaxed flex-grow">"Sebagai freelancer, pengeluaran gak rutin tiap bulan. Dengan tool ini jadi bisa track mana yang perlu dipotong. <strong class="text-textDark font-semibold">Voice input-nya game changer banget!</strong>"</p>
+                            <div class="flex items-center gap-3 mt-auto">
+                                <div class="w-12 h-12 rounded-full bg-[#DBEAFE] text-[#2563EB] flex items-center justify-center font-bold text-lg shrink-0">
+                                    BP
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-textDark text-sm">Budi P.</h4>
+                                    <p class="text-xs text-textLight">Freelancer, Bandung</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testi 3 -->
+                    <div class="snap-center shrink-0 w-[85%]">
+                        <div class="bg-white rounded-[20px] p-6 border border-borderLight card-shadow h-full flex flex-col">
+                            <!-- Stars -->
+                            <div class="flex gap-1 mb-4 text-[#FBBF24]">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            </div>
+                            <p class="text-textMuted italic mb-6 leading-relaxed flex-grow">"Yang paling saya suka data ada di sheet sendiri. <strong class="text-textDark font-semibold">Gak perlu khawatir privasi bocor ke pihak lain.</strong> Setup-nya juga gampang, 10 menit beres."</p>
+                            <div class="flex items-center gap-3 mt-auto">
+                                <div class="w-12 h-12 rounded-full bg-[#F3E8FF] text-[#9333EA] flex items-center justify-center font-bold text-lg shrink-0">
+                                    SW
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-textDark text-sm">Sinta W.</h4>
+                                    <p class="text-xs text-textLight">HR Manager, Surabaya</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Testimonial 2 -->
-                <div class="bg-white rounded-xl p-5 border border-borderLight card-hover reveal"
-                    style="animation-delay: 0.2s;">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div
-                            class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-400 flex items-center justify-center text-white font-semibold text-sm">
-                            BP
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-textDark text-sm">Budi P.</h4>
-                            <p class="text-xs text-textMuted">Freelancer, Bandung</p>
-                        </div>
-                    </div>
-                    <p class="text-sm text-textMuted leading-relaxed">
-                        "Sebagai freelancer, pengeluaran gak rutin tiap bulan. Dengan tool ini jadi bisa track mana yang
-                        perlu dipotong. <strong class="text-textDark">Voice input-nya game changer banget!</strong>"
-                    </p>
-                    <div class="flex gap-1 mt-3">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#FF8C42" stroke="none">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                        </svg>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#FF8C42" stroke="none">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                        </svg>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#FF8C42" stroke="none">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                        </svg>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#FF8C42" stroke="none">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                        </svg>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#FF8C42" stroke="none">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="bg-white rounded-xl p-5 border border-borderLight card-hover reveal"
-                    style="animation-delay: 0.3s;">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div
-                            class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-purple-400 flex items-center justify-center text-white font-semibold text-sm">
-                            SW
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-textDark text-sm">Sinta W.</h4>
-                            <p class="text-xs text-textMuted">HR Manager, Surabaya</p>
-                        </div>
-                    </div>
-                    <p class="text-sm text-textMuted leading-relaxed">
-                        "Yang paling saya suka data ada di sheet sendiri. <strong class="text-textDark">Gak perlu
-                            khawatir privasi bocor ke pihak lain.</strong> Setup-nya juga gampang, 10 menit beres."
-                    </p>
-                    <div class="flex gap-1 mt-3">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#FF8C42" stroke="none">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                        </svg>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#FF8C42" stroke="none">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                        </svg>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#FF8C42" stroke="none">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                        </svg>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#FF8C42" stroke="none">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                        </svg>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#FF8C42" stroke="none">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                        </svg>
-                    </div>
+                <!-- Carousel Dots Testimoni -->
+                <div class="flex justify-center gap-2 mt-4" id="testi-dots">
+                    <button class="w-2 h-2 rounded-full bg-primary transition-all duration-300"></button>
+                    <button class="w-2 h-2 rounded-full bg-border transition-all duration-300"></button>
+                    <button class="w-2 h-2 rounded-full bg-border transition-all duration-300"></button>
                 </div>
             </div>
         </div>
@@ -1298,11 +856,8 @@
     <section id="faq" class="py-12 px-4 bg-bgMain">
         <div class="max-w-md mx-auto">
             <div class="text-center mb-8 reveal">
-                <span
-                    class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-3">FAQ</span>
-                <h2 class="font-display text-2xl font-bold text-textDark mb-2">
-                    Pertanyaan Umum
-                </h2>
+                <span class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-3">FAQ</span>
+                <h2 class="font-display text-2xl font-bold text-textDark mb-2">Pertanyaan Umum</h2>
                 <p class="text-textMuted">Jawaban untuk pertanyaan yang sering diajukan</p>
             </div>
 
@@ -1313,17 +868,14 @@
                         <span class="faq-question">Apakah data keuangan saya aman?</span>
                         <span class="faq-icon-wrapper">
                             <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                             </svg>
                         </span>
                     </button>
                     <div class="faq-content">
                         <div class="faq-content-inner">
                             <div class="faq-divider"></div>
-                            <p class="faq-answer">Data kamu disimpan di Google Sheets milik kamu sendiri. Jadi kamu
-                                punya full control atas data tersebut, bukan di server pihak ketiga. Privasi kamu tetap
-                                terjaga sepenuhnya.</p>
+                            <p class="faq-answer">Data kamu disimpan di Google Sheets milik kamu sendiri. Jadi kamu punya full control atas data tersebut, bukan di server pihak ketiga. Privasi kamu tetap terjaga sepenuhnya.</p>
                         </div>
                     </div>
                 </div>
@@ -1334,17 +886,14 @@
                         <span class="faq-question">Butuh aplikasi khusus untuk menggunakannya?</span>
                         <span class="faq-icon-wrapper">
                             <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                             </svg>
                         </span>
                     </button>
                     <div class="faq-content">
                         <div class="faq-content-inner">
                             <div class="faq-divider"></div>
-                            <p class="faq-answer">Tidak perlu! Cukup akses via browser atau platform chat yang sudah
-                                familiar. Tinggal chat, data langsung tercatat. Tanpa perlu install aplikasi tambahan
-                                yang makan memori HP.</p>
+                            <p class="faq-answer">Tidak perlu! Cukup akses via browser atau platform chat yang sudah familiar. Tinggal chat, data langsung tercatat. Tanpa perlu install aplikasi tambahan yang makan memori HP.</p>
                         </div>
                     </div>
                 </div>
@@ -1355,17 +904,14 @@
                         <span class="faq-question">Bisa pakai voice input?</span>
                         <span class="faq-icon-wrapper">
                             <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                             </svg>
                         </span>
                     </button>
                     <div class="faq-content">
                         <div class="faq-content-inner">
                             <div class="faq-divider"></div>
-                            <p class="faq-answer">Bisa banget! Kamu tinggal pakai fitur voice input di keyboard HP atau
-                                browser, bicara seperti biasa, dan AI akan mencatat transaksi kamu. Praktis saat lagi di
-                                jalan atau sibuk.</p>
+                            <p class="faq-answer">Bisa banget! Kamu tinggal pakai fitur voice input di keyboard HP atau browser, bicara seperti biasa, dan AI akan mencatat transaksi kamu. Praktis saat lagi di jalan atau sibuk.</p>
                         </div>
                     </div>
                 </div>
@@ -1376,17 +922,14 @@
                         <span class="faq-question">Berapa kali pembayaran?</span>
                         <span class="faq-icon-wrapper">
                             <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                             </svg>
                         </span>
                     </button>
                     <div class="faq-content">
                         <div class="faq-content-inner">
                             <div class="faq-divider"></div>
-                            <p class="faq-answer">Hanya sekali bayar untuk akses selamanya. Termasuk semua update dan
-                                improvement yang akan datang tanpa biaya tambahan. Tidak ada biaya bulanan atau tahunan.
-                            </p>
+                            <p class="faq-answer">Hanya sekali bayar untuk akses selamanya. Termasuk semua update dan improvement yang akan datang tanpa biaya tambahan. Tidak ada biaya bulanan atau tahunan.</p>
                         </div>
                     </div>
                 </div>
@@ -1397,17 +940,14 @@
                         <span class="faq-question">Apakah ada garansi?</span>
                         <span class="faq-icon-wrapper">
                             <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                             </svg>
                         </span>
                     </button>
                     <div class="faq-content">
                         <div class="faq-content-inner">
                             <div class="faq-divider"></div>
-                            <p class="faq-answer">Kami menyediakan demo dan penjelasan lengkap sebelum kamu membeli.
-                                Pastikan kamu sudah paham fitur dan manfaatnya sebelum checkout. Tim support kami juga
-                                siap membantu jika ada pertanyaan.</p>
+                            <p class="faq-answer">Kami menyediakan demo dan penjelasan lengkap sebelum kamu membeli. Pastikan kamu sudah paham fitur dan manfaatnya sebelum checkout. Tim support kami juga siap membantu jika ada pertanyaan.</p>
                         </div>
                     </div>
                 </div>
@@ -1441,22 +981,19 @@
             <div class="flex justify-center items-center gap-6 mt-8 pt-6 border-t border-border">
                 <div class="flex items-center gap-2 text-textLight text-xs">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                     <span>Data Aman</span>
                 </div>
                 <div class="flex items-center gap-2 text-textLight text-xs">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
                     <span>Pembayaran Aman</span>
                 </div>
                 <div class="flex items-center gap-2 text-textLight text-xs">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                     <span>Akses Instan</span>
                 </div>
@@ -1468,9 +1005,7 @@
     <section id="conversion" class="py-12 px-4 bg-gradient-to-b from-white via-orange-50 to-orange-100">
         <div class="max-w-md mx-auto">
             <div class="text-center mb-6 reveal">
-                <span
-                    class="inline-block bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">PENAWARAN
-                    SPESIAL</span>
+                <span class="inline-block bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">PENAWARAN SPESIAL</span>
                 <h2 class="font-display text-2xl font-bold text-textDark mb-2">
                     Mulai Catat Keuangan dengan Cara Mudah
                 </h2>
@@ -1487,33 +1022,25 @@
                     <ul class="space-y-3">
                         <li class="flex items-center gap-3 text-sm">
                             <svg class="w-5 h-5 text-success flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                    clip-rule="evenodd" />
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                             </svg>
                             <span class="text-textDark">Akses Excellearn Wealth Tracker</span>
                         </li>
                         <li class="flex items-center gap-3 text-sm">
                             <svg class="w-5 h-5 text-success flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                    clip-rule="evenodd" />
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                             </svg>
                             <span class="text-textDark">Google Sheet Template untuk Integrasi</span>
                         </li>
                         <li class="flex items-center gap-3 text-sm">
                             <svg class="w-5 h-5 text-success flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                    clip-rule="evenodd" />
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                             </svg>
                             <span class="text-textDark">Lifetime Update (tanpa biaya tambahan)</span>
                         </li>
                         <li class="flex items-center gap-3 text-sm">
                             <svg class="w-5 h-5 text-success flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                    clip-rule="evenodd" />
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                             </svg>
                             <span class="text-textDark">Support via Chat</span>
                         </li>
@@ -1557,22 +1084,17 @@
                 <!-- Urgency -->
                 <div class="bg-red-50 border border-red-200 rounded-xl p-4 mb-6">
                     <div class="flex items-center justify-center gap-2">
-                        <svg class="w-5 h-5 text-red-500 animate-pulse" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        <svg class="w-5 h-5 text-red-500 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <span class="text-red-600 font-medium text-sm">Sisa Slot: <span id="slot-count-2"
-                                class="font-bold">37</span></span>
+                        <span class="text-red-600 font-medium text-sm">Sisa Slot: <span id="slot-count-2" class="font-bold">37</span></span>
                     </div>
                 </div>
 
                 <!-- CTA Button -->
-                <a href="https://winme.id/mrexcellearn/excellearn-wealth-tracker" data-action="cta-click"
-                    class="btn-primary no-underline inline-flex items-center justify-center gap-2 w-full py-4 rounded-xl font-semibold text-white text-lg">
+                <a href="https://winme.id/mrexcellearn/excellearn-wealth-tracker" data-action="cta-click" class="btn-primary no-underline inline-flex items-center justify-center gap-2 w-full py-4 rounded-xl font-semibold text-white text-lg">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                     Mulai Catat dengan AI
                 </a>
@@ -1581,17 +1103,13 @@
                 <div class="flex items-center justify-center gap-4 mt-4 text-xs text-textLight">
                     <span class="flex items-center gap-1">
                         <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
-                                clip-rule="evenodd" />
+                            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
                         </svg>
                         Pembayaran Aman
                     </span>
                     <span class="flex items-center gap-1">
                         <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd" />
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                         </svg>
                         Akses Instan
                     </span>
@@ -1618,14 +1136,11 @@
     </footer>
 
     <!-- STICKY CTA MOBILE -->
-    <div id="sticky-cta"
-        class="fixed bottom-0 left-0 right-0 sticky-cta p-4 border-t border-border z-50 md:hidden transform translate-y-full transition-transform duration-300">
+    <div id="sticky-cta" class="fixed bottom-0 left-0 right-0 sticky-cta p-4 border-t border-border z-50 md:hidden transform translate-y-full transition-transform duration-300">
         <div class="max-w-md mx-auto">
-            <a href="#conversion" data-action="cta-click"
-                class="btn-primary no-underline inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-white">
+            <a href="#conversion" data-action="cta-click" class="btn-primary no-underline inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-white">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
                 Mulai Catat dengan AI - Rp 49.999
             </a>
@@ -1777,6 +1292,43 @@
 
             // Start autoplay
             startAutoPlay();
+        }
+
+        // --- TESTIMONIAL SCROLL LOGIC ---
+        const testiTrack = document.getElementById('testi-track');
+        const testiDots = document.getElementById('testi-dots');
+
+        if (testiTrack && testiDots) {
+            const dots = testiDots.children;
+            
+            // Listen to scroll events to update dots
+            testiTrack.addEventListener('scroll', () => {
+                const scrollLeft = testiTrack.scrollLeft;
+                const width = testiTrack.offsetWidth;
+                const index = Math.round(scrollLeft / width);
+                
+                Array.from(dots).forEach((dot, i) => {
+                    if (i === index) {
+                        dot.classList.add('bg-primary');
+                        dot.classList.remove('bg-border');
+                    } else {
+                        dot.classList.remove('bg-primary');
+                        dot.classList.add('bg-border');
+                    }
+                });
+            });
+            
+            // Make dots clickable to jump to slide
+            Array.from(dots).forEach((dot, i) => {
+                dot.addEventListener('click', () => {
+                    // Estimate width of one card plus gap
+                    const cardWidth = testiTrack.querySelector('.snap-center').offsetWidth + 16; // 16px is gap-4
+                    testiTrack.scrollTo({
+                        left: cardWidth * i,
+                        behavior: 'smooth'
+                    });
+                });
+            });
         }
 
         // Scroll reveal observer

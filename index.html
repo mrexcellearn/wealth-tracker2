@@ -444,7 +444,6 @@
                 </div>
 
                 <div class="space-y-4">
-                    <!-- Pain Point 1 -->
                     <div class="flex items-start gap-4 p-4 bg-bgMain rounded-xl card-hover cursor-default">
                         <div class="flex-shrink-0 w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
                             <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -457,7 +456,6 @@
                         </div>
                     </div>
 
-                    <!-- Pain Point 2 -->
                     <div class="flex items-start gap-4 p-4 bg-bgMain rounded-xl card-hover cursor-default">
                         <div class="flex-shrink-0 w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
                             <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -470,7 +468,6 @@
                         </div>
                     </div>
 
-                    <!-- Pain Point 3 -->
                     <div class="flex items-start gap-4 p-4 bg-bgMain rounded-xl card-hover cursor-default">
                         <div class="flex-shrink-0 w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
                             <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -483,7 +480,6 @@
                         </div>
                     </div>
 
-                    <!-- Pain Point 4 -->
                     <div class="flex items-start gap-4 p-4 bg-bgMain rounded-xl card-hover cursor-default">
                         <div class="flex-shrink-0 w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
                             <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -547,7 +543,6 @@
                 </p>
             </div>
 
-            <!-- Feature Cards -->
             <div class="space-y-4">
                 <div class="bg-gradient-to-r from-orange-50 to-white p-5 rounded-xl card-shadow reveal" style="animation-delay: 0.1s;">
                     <div class="flex items-center gap-4">
@@ -598,57 +593,53 @@
                 </div>
             </div>
 
-            <!-- App Preview Carousel -->
+            <!-- App Preview Carousel (FIXED ASPECT RATIO & OBJECT FIT) -->
             <div class="mt-8 reveal" style="animation-delay: 0.5s;">
                 <div class="carousel-container card-shadow">
                     <div class="carousel-progress" id="carousel-progress"></div>
 
                     <button class="carousel-nav-btn prev" id="carousel-prev" aria-label="Previous slide">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                        </svg>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
                     </button>
 
                     <button class="carousel-nav-btn next" id="carousel-next" aria-label="Next slide">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                        </svg>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
                     </button>
 
                     <div class="carousel-track" id="carousel-track">
-                        <!-- Slide 1: Chat Interface -->
+                        <!-- Slide 1 -->
                         <div class="carousel-slide">
-                            <!-- PERBAIKAN: Menggunakan aspect-square dan object-cover untuk memaksa rasio 1:1 -->
-                            <div class="slide-content p-0">
-                                <div class="w-full aspect-square bg-[#1C1917] flex items-center justify-center overflow-hidden">
-                                    <img src="slide1.png" alt="Slide 1" class="w-full h-full object-cover">
+                            <div class="slide-content p-4"> <!-- Ditambah p-4 agar ada jarak ke tepi slider -->
+                                <!-- PERUBAHAN: object-contain memastikan gambar TIDAK distorsi dan TIDAK terpotong -->
+                                <div class="w-full aspect-square flex items-center justify-center rounded-xl overflow-hidden bg-[#1C1917]">
+                                    <img src="slide1.webp" alt="Slide 1" class="w-full h-full object-contain">
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Slide 2: Dashboard -->
+                        <!-- Slide 2 -->
                         <div class="carousel-slide">
-                            <div class="slide-content p-0">
-                                <div class="w-full aspect-square bg-[#1C1917] flex items-center justify-center overflow-hidden">
-                                    <img src="slide2.png" alt="Slide 2" class="w-full h-full object-cover">
+                            <div class="slide-content p-4">
+                                <div class="w-full aspect-square flex items-center justify-center rounded-xl overflow-hidden bg-[#1C1917]">
+                                    <img src="slide2.webp" alt="Slide 2" class="w-full h-full object-contain">
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Slide 3: Categories -->
+                        <!-- Slide 3 -->
                         <div class="carousel-slide">
-                            <div class="slide-content p-0">
-                                <div class="w-full aspect-square bg-[#1C1917] flex items-center justify-center overflow-hidden">
-                                    <img src="slide3.png" alt="Slide 3" class="w-full h-full object-cover">
+                            <div class="slide-content p-4">
+                                <div class="w-full aspect-square flex items-center justify-center rounded-xl overflow-hidden bg-[#1C1917]">
+                                    <img src="slide3.webp" alt="Slide 3" class="w-full h-full object-contain">
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Slide 4: Google Sheets Integration -->
+                        <!-- Slide 4 -->
                         <div class="carousel-slide">
-                            <div class="slide-content p-0">
-                                <div class="w-full aspect-square bg-[#1C1917] flex items-center justify-center overflow-hidden">
-                                    <img src="slide4.png" alt="Slide 4" class="w-full h-full object-cover">
+                            <div class="slide-content p-4">
+                                <div class="w-full aspect-square flex items-center justify-center rounded-xl overflow-hidden bg-[#1C1917]">
+                                    <img src="slide4.webp" alt="Slide 4" class="w-full h-full object-contain">
                                 </div>
                             </div>
                         </div>
@@ -687,66 +678,46 @@
                         <tr>
                             <td class="p-4 text-textMuted">Input Data</td>
                             <td class="p-4 text-center">
-                                <svg class="w-5 h-5 mx-auto text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
+                                <svg class="w-5 h-5 mx-auto text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
                             </td>
                             <td class="p-4 text-center">
-                                <svg class="w-5 h-5 mx-auto text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                </svg>
+                                <svg class="w-5 h-5 mx-auto text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
                             </td>
                         </tr>
                         <tr class="bg-bgMain/50">
                             <td class="p-4 text-textMuted">Voice Input</td>
                             <td class="p-4 text-center">
-                                <svg class="w-5 h-5 mx-auto text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
+                                <svg class="w-5 h-5 mx-auto text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
                             </td>
                             <td class="p-4 text-center">
-                                <svg class="w-5 h-5 mx-auto text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                </svg>
+                                <svg class="w-5 h-5 mx-auto text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
                             </td>
                         </tr>
                         <tr>
                             <td class="p-4 text-textMuted">Multi-Transaksi</td>
                             <td class="p-4 text-center">
-                                <svg class="w-5 h-5 mx-auto text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
+                                <svg class="w-5 h-5 mx-auto text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
                             </td>
                             <td class="p-4 text-center">
-                                <svg class="w-5 h-5 mx-auto text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                </svg>
+                                <svg class="w-5 h-5 mx-auto text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
                             </td>
                         </tr>
                         <tr class="bg-bgMain/50">
                             <td class="p-4 text-textMuted">Data di G-Sheets Sendiri</td>
                             <td class="p-4 text-center">
-                                <svg class="w-5 h-5 mx-auto text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
+                                <svg class="w-5 h-5 mx-auto text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
                             </td>
                             <td class="p-4 text-center">
-                                <svg class="w-5 h-5 mx-auto text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                </svg>
+                                <svg class="w-5 h-5 mx-auto text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
                             </td>
                         </tr>
                         <tr>
                             <td class="p-4 text-textMuted">Perlu Install App</td>
                             <td class="p-4 text-center">
-                                <svg class="w-5 h-5 mx-auto text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                </svg>
+                                <svg class="w-5 h-5 mx-auto text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
                             </td>
                             <td class="p-4 text-center">
-                                <svg class="w-5 h-5 mx-auto text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
+                                <svg class="w-5 h-5 mx-auto text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
                             </td>
                         </tr>
                     </tbody>
@@ -755,24 +726,20 @@
         </div>
     </section>
 
-    <!-- TESTIMONIAL SECTION (UPDATED TO HORIZONTAL SLIDER) -->
+    <!-- TESTIMONIAL SECTION -->
     <section class="py-12 px-4 bg-white overflow-hidden">
         <div class="max-w-md mx-auto">
             <div class="text-center mb-8 reveal">
                 <span class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-3">TESTIMONI</span>
-                <h2 class="font-display text-xl font-bold text-textDark">
-                    Kata Mereka yang Udah Pake
-                </h2>
+                <h2 class="font-display text-xl font-bold text-textDark">Kata Mereka yang Udah Pake</h2>
             </div>
 
-            <!-- Testimonial Horizontal Scroll Track -->
             <div class="reveal">
                 <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 hide-scrollbar w-full" id="testi-track" style="scroll-behavior: smooth;">
                     
                     <!-- Testi 1 -->
                     <div class="snap-center shrink-0 w-[85%]">
                         <div class="bg-white rounded-[20px] p-6 border border-borderLight card-shadow h-full flex flex-col">
-                            <!-- Stars -->
                             <div class="flex gap-1 mb-4 text-[#FBBF24]">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -782,9 +749,7 @@
                             </div>
                             <p class="text-textMuted italic mb-6 leading-relaxed flex-grow">"Dulu selalu gagal konsisten catat keuangan. Pakai ini jadi gampang banget, tinggal chat pas lagi nunggu MRT. <strong class="text-textDark font-semibold">Sebulan udah kelihatan pola pengeluaran saya.</strong>"</p>
                             <div class="flex items-center gap-3 mt-auto">
-                                <div class="w-12 h-12 rounded-full bg-[#FCE7F3] text-[#DB2777] flex items-center justify-center font-bold text-lg shrink-0">
-                                    RA
-                                </div>
+                                <div class="w-12 h-12 rounded-full bg-[#FCE7F3] text-[#DB2777] flex items-center justify-center font-bold text-lg shrink-0">RA</div>
                                 <div>
                                     <h4 class="font-bold text-textDark text-sm">Rina A.</h4>
                                     <p class="text-xs text-textLight">Marketing Staff, Jakarta</p>
@@ -796,7 +761,6 @@
                     <!-- Testi 2 -->
                     <div class="snap-center shrink-0 w-[85%]">
                         <div class="bg-white rounded-[20px] p-6 border border-borderLight card-shadow h-full flex flex-col">
-                            <!-- Stars -->
                             <div class="flex gap-1 mb-4 text-[#FBBF24]">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -806,9 +770,7 @@
                             </div>
                             <p class="text-textMuted italic mb-6 leading-relaxed flex-grow">"Sebagai freelancer, pengeluaran gak rutin tiap bulan. Dengan tool ini jadi bisa track mana yang perlu dipotong. <strong class="text-textDark font-semibold">Voice input-nya game changer banget!</strong>"</p>
                             <div class="flex items-center gap-3 mt-auto">
-                                <div class="w-12 h-12 rounded-full bg-[#DBEAFE] text-[#2563EB] flex items-center justify-center font-bold text-lg shrink-0">
-                                    BP
-                                </div>
+                                <div class="w-12 h-12 rounded-full bg-[#DBEAFE] text-[#2563EB] flex items-center justify-center font-bold text-lg shrink-0">BP</div>
                                 <div>
                                     <h4 class="font-bold text-textDark text-sm">Budi P.</h4>
                                     <p class="text-xs text-textLight">Freelancer, Bandung</p>
@@ -820,7 +782,6 @@
                     <!-- Testi 3 -->
                     <div class="snap-center shrink-0 w-[85%]">
                         <div class="bg-white rounded-[20px] p-6 border border-borderLight card-shadow h-full flex flex-col">
-                            <!-- Stars -->
                             <div class="flex gap-1 mb-4 text-[#FBBF24]">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -830,9 +791,7 @@
                             </div>
                             <p class="text-textMuted italic mb-6 leading-relaxed flex-grow">"Yang paling saya suka data ada di sheet sendiri. <strong class="text-textDark font-semibold">Gak perlu khawatir privasi bocor ke pihak lain.</strong> Setup-nya juga gampang, 10 menit beres."</p>
                             <div class="flex items-center gap-3 mt-auto">
-                                <div class="w-12 h-12 rounded-full bg-[#F3E8FF] text-[#9333EA] flex items-center justify-center font-bold text-lg shrink-0">
-                                    SW
-                                </div>
+                                <div class="w-12 h-12 rounded-full bg-[#F3E8FF] text-[#9333EA] flex items-center justify-center font-bold text-lg shrink-0">SW</div>
                                 <div>
                                     <h4 class="font-bold text-textDark text-sm">Sinta W.</h4>
                                     <p class="text-xs text-textLight">HR Manager, Surabaya</p>
@@ -862,14 +821,11 @@
             </div>
 
             <div class="faq-list">
-                <!-- FAQ 1 -->
                 <div class="faq-item reveal" style="animation-delay: 0.1s;">
                     <button class="faq-trigger" aria-expanded="false">
                         <span class="faq-question">Apakah data keuangan saya aman?</span>
                         <span class="faq-icon-wrapper">
-                            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                         </span>
                     </button>
                     <div class="faq-content">
@@ -880,14 +836,11 @@
                     </div>
                 </div>
 
-                <!-- FAQ 2 -->
                 <div class="faq-item reveal" style="animation-delay: 0.15s;">
                     <button class="faq-trigger" aria-expanded="false">
                         <span class="faq-question">Butuh aplikasi khusus untuk menggunakannya?</span>
                         <span class="faq-icon-wrapper">
-                            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                         </span>
                     </button>
                     <div class="faq-content">
@@ -898,14 +851,11 @@
                     </div>
                 </div>
 
-                <!-- FAQ 3 -->
                 <div class="faq-item reveal" style="animation-delay: 0.2s;">
                     <button class="faq-trigger" aria-expanded="false">
                         <span class="faq-question">Bisa pakai voice input?</span>
                         <span class="faq-icon-wrapper">
-                            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                         </span>
                     </button>
                     <div class="faq-content">
@@ -916,14 +866,11 @@
                     </div>
                 </div>
 
-                <!-- FAQ 4 -->
                 <div class="faq-item reveal" style="animation-delay: 0.25s;">
                     <button class="faq-trigger" aria-expanded="false">
                         <span class="faq-question">Berapa kali pembayaran?</span>
                         <span class="faq-icon-wrapper">
-                            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                         </span>
                     </button>
                     <div class="faq-content">
@@ -934,14 +881,11 @@
                     </div>
                 </div>
 
-                <!-- FAQ 5 -->
                 <div class="faq-item reveal" style="animation-delay: 0.3s;">
                     <button class="faq-trigger" aria-expanded="false">
                         <span class="faq-question">Apakah ada garansi?</span>
                         <span class="faq-icon-wrapper">
-                            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                         </span>
                     </button>
                     <div class="faq-content">
@@ -977,24 +921,17 @@
                 </div>
             </div>
 
-            <!-- Trust Badges -->
             <div class="flex justify-center items-center gap-6 mt-8 pt-6 border-t border-border">
                 <div class="flex items-center gap-2 text-textLight text-xs">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                     <span>Data Aman</span>
                 </div>
                 <div class="flex items-center gap-2 text-textLight text-xs">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                    </svg>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
                     <span>Pembayaran Aman</span>
                 </div>
                 <div class="flex items-center gap-2 text-textLight text-xs">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                     <span>Akses Instan</span>
                 </div>
             </div>
@@ -1006,48 +943,33 @@
         <div class="max-w-md mx-auto">
             <div class="text-center mb-6 reveal">
                 <span class="inline-block bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full mb-3">PENAWARAN SPESIAL</span>
-                <h2 class="font-display text-2xl font-bold text-textDark mb-2">
-                    Mulai Catat Keuangan dengan Cara Mudah
-                </h2>
-                <p class="text-textMuted text-sm">
-                    Harga promo terbatas. Sisa slot semakin berkurang.
-                </p>
+                <h2 class="font-display text-2xl font-bold text-textDark mb-2">Mulai Catat Keuangan dengan Cara Mudah</h2>
+                <p class="text-textMuted text-sm">Harga promo terbatas. Sisa slot semakin berkurang.</p>
             </div>
 
-            <!-- Pricing Card -->
             <div class="bg-white rounded-2xl card-shadow p-6 reveal">
-                <!-- Value Stack -->
                 <div class="mb-6">
                     <h3 class="font-semibold text-textDark mb-3">Yang Kamu Dapat:</h3>
                     <ul class="space-y-3">
                         <li class="flex items-center gap-3 text-sm">
-                            <svg class="w-5 h-5 text-success flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                            </svg>
+                            <svg class="w-5 h-5 text-success flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
                             <span class="text-textDark">Akses Excellearn Wealth Tracker</span>
                         </li>
                         <li class="flex items-center gap-3 text-sm">
-                            <svg class="w-5 h-5 text-success flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                            </svg>
+                            <svg class="w-5 h-5 text-success flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
                             <span class="text-textDark">Google Sheet Template untuk Integrasi</span>
                         </li>
                         <li class="flex items-center gap-3 text-sm">
-                            <svg class="w-5 h-5 text-success flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                            </svg>
+                            <svg class="w-5 h-5 text-success flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
                             <span class="text-textDark">Lifetime Update (tanpa biaya tambahan)</span>
                         </li>
                         <li class="flex items-center gap-3 text-sm">
-                            <svg class="w-5 h-5 text-success flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                            </svg>
+                            <svg class="w-5 h-5 text-success flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
                             <span class="text-textDark">Support via Chat</span>
                         </li>
                     </ul>
                 </div>
 
-                <!-- Total Value Table -->
                 <div class="bg-bgMain rounded-xl p-4 mb-6">
                     <table class="w-full text-sm">
                         <tbody>
@@ -1071,7 +993,6 @@
                     </table>
                 </div>
 
-                <!-- Price -->
                 <div class="text-center mb-6">
                     <div class="flex items-center justify-center gap-2 mb-2">
                         <span class="text-textLight line-through text-lg">Rp 250.000</span>
@@ -1081,7 +1002,6 @@
                     <p class="text-textMuted text-sm mt-1">Sekali bayar, akses selamanya</p>
                 </div>
 
-                <!-- Urgency -->
                 <div class="bg-red-50 border border-red-200 rounded-xl p-4 mb-6">
                     <div class="flex items-center justify-center gap-2">
                         <svg class="w-5 h-5 text-red-500 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1091,7 +1011,6 @@
                     </div>
                 </div>
 
-                <!-- CTA Button -->
                 <a href="https://winme.id/mrexcellearn/excellearn-wealth-tracker" data-action="cta-click" class="btn-primary no-underline inline-flex items-center justify-center gap-2 w-full py-4 rounded-xl font-semibold text-white text-lg">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -1099,18 +1018,13 @@
                     Mulai Catat dengan AI
                 </a>
 
-                <!-- Micro-copy Trust -->
                 <div class="flex items-center justify-center gap-4 mt-4 text-xs text-textLight">
                     <span class="flex items-center gap-1">
-                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
-                        </svg>
+                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" /></svg>
                         Pembayaran Aman
                     </span>
                     <span class="flex items-center gap-1">
-                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
+                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
                         Akses Instan
                     </span>
                 </div>
@@ -1121,17 +1035,13 @@
     <!-- FOOTER -->
     <footer class="py-8 px-4 bg-textDark">
         <div class="max-w-md mx-auto text-center">
-            <p class="text-white/60 text-sm mb-4">
-                Excellearn Wealth Tracker by Mrexcellearn
-            </p>
+            <p class="text-white/60 text-sm mb-4">Excellearn Wealth Tracker by Mrexcellearn</p>
             <div class="flex justify-center gap-4 text-xs text-white/40">
                 <a href="#" class="hover:text-white/60 transition-colors no-underline">Syarat & Ketentuan</a>
                 <span>|</span>
                 <a href="#" class="hover:text-white/60 transition-colors no-underline">Kebijakan Privasi</a>
             </div>
-            <p class="text-white/30 text-xs mt-4">
-                2025 Excellearn. All rights reserved.
-            </p>
+            <p class="text-white/30 text-xs mt-4">2025 Excellearn. All rights reserved.</p>
         </div>
     </footer>
 
@@ -1139,22 +1049,18 @@
     <div id="sticky-cta" class="fixed bottom-0 left-0 right-0 sticky-cta p-4 border-t border-border z-50 md:hidden transform translate-y-full transition-transform duration-300">
         <div class="max-w-md mx-auto">
             <a href="#conversion" data-action="cta-click" class="btn-primary no-underline inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-white">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                 Mulai Catat dengan AI - Rp 49.999
             </a>
         </div>
     </div>
 
     <script>
-        // Initialize all DOM references first
+        // DOM References
         const stickyCta = document.getElementById('sticky-cta');
         const faqItems = document.querySelectorAll('.faq-item');
         const revealElements = document.querySelectorAll('.reveal');
         const slotCountElements = document.querySelectorAll('[id^="slot-count"]');
-
-        // Carousel Elements
         const carouselTrack = document.getElementById('carousel-track');
         const carouselDots = document.getElementById('carousel-dots');
         const carouselProgress = document.getElementById('carousel-progress');
@@ -1169,7 +1075,7 @@
         let progressTimer = null;
         let progressValue = 0;
 
-        // Slot count data
+        // Slot state
         let currentSlots = 37;
 
         // Carousel Functions
@@ -1177,8 +1083,6 @@
             if (carouselTrack) {
                 carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
             }
-
-            // Update dots
             const dots = carouselDots.querySelectorAll('.carousel-dot');
             dots.forEach((dot, index) => {
                 dot.classList.toggle('active', index === currentSlide);
@@ -1213,8 +1117,6 @@
         function startAutoPlay() {
             stopAutoPlay();
             autoPlayTimer = setInterval(nextSlide, autoPlayInterval);
-
-            // Progress bar animation
             progressTimer = setInterval(() => {
                 progressValue += 100 / (autoPlayInterval / 50);
                 if (carouselProgress) {
@@ -1236,26 +1138,12 @@
 
         // Initialize Carousel
         if (carouselTrack && carouselDots && prevBtn && nextBtn) {
-            // Navigation buttons
-            prevBtn.addEventListener('click', () => {
-                prevSlide();
-                startAutoPlay();
-            });
-
-            nextBtn.addEventListener('click', () => {
-                nextSlide();
-                startAutoPlay();
-            });
-
-            // Dot navigation
+            prevBtn.addEventListener('click', () => { prevSlide(); startAutoPlay(); });
+            nextBtn.addEventListener('click', () => { nextSlide(); startAutoPlay(); });
             carouselDots.querySelectorAll('.carousel-dot').forEach((dot, index) => {
-                dot.addEventListener('click', () => {
-                    goToSlide(index);
-                    startAutoPlay();
-                });
+                dot.addEventListener('click', () => { goToSlide(index); startAutoPlay(); });
             });
 
-            // Touch/Swipe support
             let touchStartX = 0;
             let touchEndX = 0;
 
@@ -1266,42 +1154,28 @@
 
             carouselTrack.addEventListener('touchend', (e) => {
                 touchEndX = e.changedTouches[0].screenX;
-                handleSwipe();
+                const diff = touchStartX - touchEndX;
+                if (Math.abs(diff) > 50) {
+                    if (diff > 0) nextSlide();
+                    else prevSlide();
+                }
                 startAutoPlay();
             }, { passive: true });
 
-            function handleSwipe() {
-                const swipeThreshold = 50;
-                const diff = touchStartX - touchEndX;
-
-                if (Math.abs(diff) > swipeThreshold) {
-                    if (diff > 0) {
-                        nextSlide();
-                    } else {
-                        prevSlide();
-                    }
-                }
-            }
-
-            // Pause on hover (desktop)
             const carouselContainer = document.querySelector('.carousel-container');
             if (carouselContainer) {
                 carouselContainer.addEventListener('mouseenter', stopAutoPlay);
                 carouselContainer.addEventListener('mouseleave', startAutoPlay);
             }
-
-            // Start autoplay
             startAutoPlay();
         }
 
-        // --- TESTIMONIAL SCROLL LOGIC ---
+        // TESTIMONIAL SCROLL LOGIC
         const testiTrack = document.getElementById('testi-track');
         const testiDots = document.getElementById('testi-dots');
 
         if (testiTrack && testiDots) {
             const dots = testiDots.children;
-            
-            // Listen to scroll events to update dots
             testiTrack.addEventListener('scroll', () => {
                 const scrollLeft = testiTrack.scrollLeft;
                 const width = testiTrack.offsetWidth;
@@ -1318,11 +1192,9 @@
                 });
             });
             
-            // Make dots clickable to jump to slide
             Array.from(dots).forEach((dot, i) => {
                 dot.addEventListener('click', () => {
-                    // Estimate width of one card plus gap
-                    const cardWidth = testiTrack.querySelector('.snap-center').offsetWidth + 16; // 16px is gap-4
+                    const cardWidth = testiTrack.querySelector('.snap-center').offsetWidth + 16; 
                     testiTrack.scrollTo({
                         left: cardWidth * i,
                         behavior: 'smooth'
@@ -1334,18 +1206,11 @@
         // Scroll reveal observer
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('active');
             });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-        revealElements.forEach(el => {
-            revealObserver.observe(el);
-        });
+        revealElements.forEach(el => revealObserver.observe(el));
 
         // Sticky CTA logic
         let lastScrollY = 0;
@@ -1356,25 +1221,17 @@
             const windowHeight = window.innerHeight;
             const docHeight = document.documentElement.scrollHeight;
 
-            // Show sticky CTA after scrolling past 300px and not at bottom
             if (scrollY > 300 && scrollY < docHeight - windowHeight - 300) {
-                if (stickyCta) {
-                    stickyCta.classList.remove('translate-y-full');
-                }
+                if (stickyCta) stickyCta.classList.remove('translate-y-full');
             } else {
-                if (stickyCta) {
-                    stickyCta.classList.add('translate-y-full');
-                }
+                if (stickyCta) stickyCta.classList.add('translate-y-full');
             }
 
-            // Header hide on scroll down
             const mainHeader = document.querySelector('header');
             if (mainHeader) {
                 if (scrollY > 50 && scrollY > lastScrollY) {
-                    // Scrolling down
                     mainHeader.classList.add('-translate-y-full');
                 } else {
-                    // Scrolling up
                     mainHeader.classList.remove('-translate-y-full');
                 }
             }
@@ -1393,23 +1250,16 @@
         // FAQ Accordion
         faqItems.forEach(item => {
             const trigger = item.querySelector('.faq-trigger');
-
             if (trigger) {
                 trigger.addEventListener('click', function () {
                     const isOpen = item.classList.contains('open');
-
-                    // Close all other FAQs
                     faqItems.forEach(otherItem => {
                         if (otherItem !== item) {
                             otherItem.classList.remove('open');
                             const otherTrigger = otherItem.querySelector('.faq-trigger');
-                            if (otherTrigger) {
-                                otherTrigger.setAttribute('aria-expanded', 'false');
-                            }
+                            if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
                         }
                     });
-
-                    // Toggle current FAQ
                     if (isOpen) {
                         item.classList.remove('open');
                         trigger.setAttribute('aria-expanded', 'false');
@@ -1421,7 +1271,7 @@
             }
         });
 
-        // Smooth scroll for anchor links
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
@@ -1429,32 +1279,23 @@
                     const target = document.querySelector(href);
                     if (target) {
                         e.preventDefault();
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }
                 }
             });
         });
 
-        // Simulate slot countdown (for demo)
+        // Simulate slot countdown
         function updateSlotCount() {
             if (Math.random() > 0.95 && currentSlots > 10) {
                 currentSlots--;
-                slotCountElements.forEach(el => {
-                    el.textContent = currentSlots;
-                });
+                slotCountElements.forEach(el => el.textContent = currentSlots);
             }
         }
-
         setInterval(updateSlotCount, 30000);
 
-        // Initialize on DOM ready
         document.addEventListener('DOMContentLoaded', function () {
             document.body.classList.add('loaded');
-
-            // Trigger reveal for hero elements
             const heroReveals = document.querySelectorAll('.hero-gradient .reveal');
             heroReveals.forEach((el, index) => {
                 el.style.animationDelay = `${index * 0.15}s`;
@@ -1462,15 +1303,11 @@
             });
         });
 
-        // Respect reduced motion preference
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             document.documentElement.style.scrollBehavior = 'auto';
-            revealElements.forEach(el => {
-                el.classList.add('active');
-            });
+            revealElements.forEach(el => el.classList.add('active'));
             stopAutoPlay();
         }
     </script>
 </body>
-
 </html>
